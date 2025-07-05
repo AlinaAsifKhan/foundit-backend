@@ -13,7 +13,15 @@ const fs = require('fs');
 
 // ========================== SETUP ==========================
 const app = express();
-app.use(cors());
+const allowedOrigins = [
+  'https://curious-gnome-bec781.netlify.app',
+  'http://localhost:3000'
+];
+
+app.use(cors({
+  origin: allowedOrigins,
+  credentials: true
+}));
 app.use(express.json());
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 const uploadPath = path.join(__dirname, 'uploads');
