@@ -195,7 +195,10 @@ app.post('/api/posts', authenticateToken, upload.single('image'), async (req, re
       if (status === 'lost' && !contact) {
         return res.status(400).json({ message: 'Contact is required for lost items' });
 }
-    const imageUrl = req.file ? `/uploads/${req.file.filename}` : null;
+    const imageUrl = req.file
+  ? `https://foundit-backend-production-2fe5.up.railway.app/uploads/${req.file.filename}`
+  : null;
+
 
     if (!name || !item || !desc) {
       return res.status(400).json({ message: 'Name, item, and description are required' });
