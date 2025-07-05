@@ -12,11 +12,22 @@ const path = require('path');
 const fs = require('fs');
 
 // ========================== SETUP ==========================
-const app = express();
 const allowedOrigins = [
-  'courageous-frangipane-94c341.netlify.app',
+  'https://comfy-mooncake-4ae766.netlify.app',
+  'https://courageous-frangipane-94c341.netlify.app',
   'http://localhost:3000'
 ];
+
+app.use(cors({
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error('CORS not allowed'));
+    }
+  },
+  credentials: true
+}));
 
 app.use(cors({
   origin: allowedOrigins,
