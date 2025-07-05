@@ -14,7 +14,7 @@ const fs = require('fs');
 // ========================== SETUP ==========================
 const app = express();
 const allowedOrigins = [
-  'https://curious-gnome-bec781.netlify.app',
+  'https://comfy-mooncake-4ae766.netlify.app',
   'http://localhost:3000'
 ];
 
