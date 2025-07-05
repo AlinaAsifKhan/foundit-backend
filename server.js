@@ -29,10 +29,6 @@ app.use(cors({
   credentials: true
 }));
 
-app.use(cors({
-  origin: allowedOrigins,
-  credentials: true
-}));
 app.use(express.json());
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 const uploadPath = path.join(__dirname, 'uploads');
