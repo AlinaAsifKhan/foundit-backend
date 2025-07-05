@@ -10,7 +10,7 @@ require('dotenv').config();
 const multer = require('multer');
 const path = require('path');
 const fs = require('fs');
-
+const app = express();
 // ========================== SETUP ==========================
 const allowedOrigins = [
   'https://comfy-mooncake-4ae766.netlify.app',
