@@ -93,7 +93,9 @@ const authenticateToken = (req, res, next) => {
 };
 
 // ========================== ROUTES ==========================
-
+app.get('/', (req, res) => {
+  res.send('🎉 FoundIt Backend is Running!');
+});
 // --- Signup Route ---
 app.post('/api/signup', async (req, res) => {
   try {
