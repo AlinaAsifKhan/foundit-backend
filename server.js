@@ -14,7 +14,7 @@ const fs = require('fs');
 // ========================== SETUP ==========================
 const app = express();
 const allowedOrigins = [
-  'https://comfy-mooncake-4ae766.netlify.app',
+  'https://relaxed-granita-a706d2.netlify.app',
   'http://localhost:3000'
 ];
 
