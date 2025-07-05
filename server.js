@@ -14,7 +14,7 @@ const fs = require('fs');
 // ========================== SETUP ==========================
 const app = express();
 const allowedOrigins = [
-  'https://relaxed-granita-a706d2.netlify.app',
+  'courageous-frangipane-94c341.netlify.app',
   'http://localhost:3000'
 ];
 
